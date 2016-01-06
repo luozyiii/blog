@@ -1,0 +1,25 @@
+---
+layout: default
+title: My Blog
+---
+
+<header class="box-header">
+	<h2>{{ page.title }}</h2>
+</header><!-- /header -->
+
+<p>最新文章</p>
+<div class="blog-content">
+	<ul class="article-ul">
+		{% for post in site.posts %}
+		<li class="article-li">
+			<div class="title">
+				<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+			</div>	
+			<div class="update-time">
+				{{ post.date | date_to_string }} 
+			</div>
+		</li>
+		{% endfor %}
+	</ul>
+</div>
+

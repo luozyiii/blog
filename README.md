@@ -1,5 +1,5 @@
-# My Blog
+# 博客
 
-前端技术
-前端设计
-开发环境
+分享一些和前端有关的知识，关注前端的发展。
+
+  地址：http://luozyiii.github.io/blog/

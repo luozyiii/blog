@@ -15,9 +15,11 @@
 /*列表*/
 .article-ul {
 	width: 100%;
+	margin-top: 30px;
 }
 .article-li {
 	width: 100%;
+	margin-bottom: 10px;
 }
 .article-li .title {
 	font-size: 18px;

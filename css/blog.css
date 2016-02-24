@@ -1,8 +1,9 @@
 /*博客*/
 .blog-box {
 	width: 100%;
-	max-width: 1200px;
+	max-width: 1140px;
 	margin: 0 auto;
+	padding: 0 30px;
 	background-color: #eee;
 }
 .box-header h2 {

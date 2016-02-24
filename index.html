@@ -3,15 +3,15 @@ layout: default
 title: 枫 -- 分享自己的技术知识和最新前端知识。
 ---
 
-<header class="blog-header">
+<header class="header">
 	<h2>{{ page.title }}</h2>
 </header><!-- /header -->
 
-<h3 class="blog-type">最新文章</h3>
-<div class="blog-content">
-	<ul class="article-ul">
+<h3 class="type">最新文章</h3>
+<div class="g-content">
+	<ul class="m-list">
 		{% for post in site.posts %}
-		<li class="article-li">
+		<li>
 			<div class="title">
 				<a href="{{ site.baseurl }}{{ post.url }}" target="_blank">{{ post.title }}</a>
 			</div>	

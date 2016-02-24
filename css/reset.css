@@ -52,24 +52,3 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     font-size: 100%;
 }
-/* global */
-.clearfix:after {
-    content: ".";
-    height: 0;
-    display: block;
-    visibility: hidden;
-    clear: both;
-    font-size: 0
-}
-.clearfix {
-    zoom: 1;
-}
-.g-f-left {
-    float: left;
-}
-.g-f-right {
-    float: right;
-}
-.js-ds-none,.ds-none {
-    display: none !important;
-}

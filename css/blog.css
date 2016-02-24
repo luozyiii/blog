@@ -1,5 +1,64 @@
-/*博客*/
-.blog-box {
+/*基础样式*/
+body {
+    font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+    font-size: 14px;
+    background-color: #fff;
+}
+h1 {
+	font-size: 32px;
+}
+h2 {
+	font-size: 30px;
+}
+h3 {
+	font-size: 24px;
+}
+h4 {
+	font-size: 20px;
+}
+h5 {
+	font-size: 18px;
+}
+h6 {
+	font-size: 16px;
+}
+span,p,pre {
+	font-size: 14px;
+}
+pre {
+	padding: 10px;
+	background-color: #ddd;
+	color: #777;
+}
+/*皮肤*/
+.s-red {
+	color: red;
+}
+
+/*功能*/
+.clearfix:after {
+    content: ".";
+    height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+    font-size: 0
+}
+.clearfix {
+    zoom: 1;
+}
+.f-left {
+    float: left;
+}
+.f-right {
+    float: right;
+}
+.js-ds-none,.ds-none {
+    display: none !important;
+}
+
+/*布局*/
+.g-box {
 	width: 100%;
 	max-width: 1200px;
 	margin: 0 auto;
@@ -8,43 +67,38 @@
 	box-sizing:border-box;
 	-webkit-box-sizing:border-box;
 }
-/*文章*/
-.blog-header h2 {
-	width: 100%;
-	padding-bottom: 20px;
-	font-size: 24px;
-}
-.blog-content {
+.g-content {
 	width: 100%;
 }
-.blog-content .red {
-	color: red;
-	font-size: 24px;
-}
-.blog-content p {
-	line-height: 2;
-}
-.blog-type {
-	height: 0px;
-}
-pre {
-	padding: 10px;
-	background-color: #ddd;
-	color: #777;
-}
+
 /*首页列表*/
-.article-ul {
+.m-list {
 	width: 100%;
 	margin-top: 30px;
 }
-.article-li {
+.m-list li {
 	width: 100%;
 	margin-bottom: 10px;
 }
-.article-li .title {
+.m-list .title {
 	font-size: 18px;
 }
-.update-time {
+.m-list .update-time {
 	font-size: 12px;
 	color: #333;
 }
+
+/*文章*/
+.header h1 {
+	width: 100%;
+	padding-bottom: 20px;
+}
+
+.g-content p {
+	line-height: 2;
+}
+.type {
+	height: 0px;
+}
+
+

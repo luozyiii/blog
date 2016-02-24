@@ -3,12 +3,12 @@ layout: default
 title: Mac下安装LNMP(Nginx+PHP5.6)环境
 ---
 
-<header class="blog-header">
-	<h2>{{ page.title }}</h2>
+<header class="header">
+	<h1>{{ page.title }}</h1>
 </header>
 <!-- /header -->
 
-<div class="blog-content">
+<div class="g-content">
 	<h3>安装Homebrew</h3>
 <pre>
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"

@@ -29,6 +29,8 @@ pre {
 	padding: 10px;
 	background-color: #ddd;
 	color: #3a3a3a;
+	white-space: pre-wrap;
+	word-wrap: break-word;
 }
 /*皮肤*/
 .s-red {

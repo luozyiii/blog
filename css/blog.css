@@ -1,14 +1,16 @@
 /*博客*/
 .blog-box {
 	width: 100%;
-	max-width: 1140px;
+	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 30px;
 	background-color: #eee;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
 }
 .box-header h2 {
 	width: 100%;
-	height: 50px;
+	padding-bottom: 20px;
 	font-size: 24px;
 }
 .blog-content {

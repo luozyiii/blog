@@ -16,6 +16,13 @@
 .blog-content {
 	width: 100%;
 }
+.blog-content .red {
+	color: red;
+	font-size: 30px;
+}
+.blog-content p {
+	line-height: 1.5;
+}
 .blog-type {
 	height: 0px;
 }

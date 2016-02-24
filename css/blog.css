@@ -75,6 +75,9 @@ pre {
 	width: 100%;
 	margin-top: 30px;
 }
+.m-list:first-child {
+	margin-top: 0;
+}
 .m-list li {
 	width: 100%;
 	margin-bottom: 10px;

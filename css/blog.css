@@ -63,7 +63,6 @@ pre {
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 30px;
-	background-color: #eee;
 	box-sizing:border-box;
 	-webkit-box-sizing:border-box;
 }
@@ -89,6 +88,9 @@ pre {
 }
 
 /*文章*/
+.header {
+	padding-bottom: 20px;
+}
 .header h1 {
 	width: 100%;
 	padding-bottom: 20px;
@@ -98,7 +100,7 @@ pre {
 	line-height: 2;
 }
 .type {
-	height: 0px;
+	height: 6px;
 }
 
 

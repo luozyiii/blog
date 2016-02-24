@@ -8,7 +8,7 @@ title: Mac下安装LNMP(Nginx+PHP5.6)环境
 </header>
 <!-- /header -->
 
-<div class="g-content">
+<section class="g-content">
 	<h3>安装Homebrew</h3>
 <pre>
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -317,7 +317,7 @@ lsof -i tcp:80
 	<div class="update-time">
 		{{ page.date | date_to_string }}
 	</div>
-</div>
+</section>
 
 
 

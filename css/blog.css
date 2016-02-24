@@ -27,7 +27,9 @@
 	height: 0px;
 }
 pre {
-	background-color: #4d4d4d;
+	padding: 10px;
+	background-color: #ddd;
+	color: #777;
 }
 /*列表*/
 .article-ul {

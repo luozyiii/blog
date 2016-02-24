@@ -18,13 +18,16 @@
 }
 .blog-content .red {
 	color: red;
-	font-size: 30px;
+	font-size: 28px;
 }
 .blog-content p {
 	line-height: 1.5;
 }
 .blog-type {
 	height: 0px;
+}
+pre {
+	background-color: #4d4d4d;
 }
 /*列表*/
 .article-ul {

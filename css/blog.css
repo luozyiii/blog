@@ -94,15 +94,12 @@ pre {
 .header {
 	padding-bottom: 20px;
 }
-.header h1 {
-	width: 100%;
-}
 
 .g-content p {
 	line-height: 2;
 }
 .type {
-	height: 6px;
+	padding-bottom: 20px;
 }
 
 

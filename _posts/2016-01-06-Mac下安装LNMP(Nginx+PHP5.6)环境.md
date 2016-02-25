@@ -9,13 +9,14 @@ title: Mac下安装LNMP(Nginx+PHP5.6)环境
 <!-- /header -->
 
 <section class="g-content">
-	<h3>安装Homebrew</h3>
+  <div class="m-list">
+    
+<h3>安装Homebrew</h3>
 <pre>
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 </pre>
-	<br>
 
-	<h3>formula</h3>
+<h3>formula</h3>
 <pre>
 brew tap homebrew/dupes
 
@@ -23,9 +24,8 @@ brew tap homebrew/versions
 
 brew tap homebrew/php
 </pre>
-	<br>
-	
-	<h3>安装PHP5.6</h3>
+
+<h3>安装PHP5.6</h3>
 <pre>
 brew install php56 \
 --without-snmp \
@@ -38,10 +38,9 @@ brew install php56 \
 --with-mysql \
 --with-tidy
 </pre>
-	<br>
 	
-	<h3>安装扩展</h3>
-	<h4>Memcache</h4>
+<h3>安装扩展</h3>
+<h4>Memcache</h4>
 <pre>
 brew install php56-memcache
 </pre>
@@ -51,9 +50,8 @@ brew install php56-memcache
 <pre>
 brew install php56-mongo
 </pre>
-	<br>
 	
-	<h3>Redis</h3>
+<h3>Redis</h3>
 <pre>
 > 在安装时发生了错误，可能与使用josegonzalez/php有关
 > 
@@ -63,32 +61,26 @@ brew install php56-mongo
 
 brew install php56-redis
 </pre>
-	<br>
 
-	<h3>php日志目录</h3>
+<h3>php日志目录</h3>
 <pre>
 mkdir -p /usr/local/var/log/php
 </pre>
-	<br>
 
-
-	<h3>安装Nginx</h3>
+<h3>安装Nginx</h3>
 <pre>
 brew install nginx
 </pre>
-	<br>
 
-
-	<h3>相关目录</h3>
+<h3>相关目录</h3>
 <pre>
 mkdir -p /usr/local/var/log/nginx
 
 mkdir -p /usr/local/etc/nginx/
 </pre>
-	<br>
 
-	<h3>ngnix.conf配置内容如下：</h3>
-	<p>路径：vim /usr/local/etc/nginx/nginx.conf</p> 
+<h3>ngnix.conf配置内容如下：</h3>
+<p>路径：vim /usr/local/etc/nginx/nginx.conf</p> 
 <pre>
 user _www _www;
 
@@ -146,9 +138,8 @@ http {
    include /usr/local/etc/nginx/vhosts/*;
 }
 </pre>
-	<br>
 
-	<h3>虚拟主机配置</h3>
+<h3>虚拟主机配置</h3>
 <pre>
 > 在/usr/local/etc/nignx/vhosts/目录下，增加 [主机名].conf 文件
 
@@ -177,10 +168,8 @@ server {
     access_log /usr/local/var/log/nginx/www.imaibo.local.access.log main;
 }
 </pre>
-	<br>
-
 	
-	<h3>配置php-fpm.conf</h3>
+<h3>配置php-fpm.conf</h3>
 <pre>
 vim /usr/local/etc/php/5.6/php-fpm.conf
 
@@ -207,9 +196,8 @@ request_terminate_timeout = 300
 
 &nbsp;
 </pre>
-	<br>
 
-	<h3>加入环境变量配置</h3>
+<h3>加入环境变量配置</h3>
 
 <pre>
 echo 'export PATH="$(brew --prefix php56)/bin:$PATH"' >> ~/.bash_profile  #for php
@@ -220,9 +208,8 @@ echo 'export PATH="/usr/local/bin:/usr/local/sbin:$PATH"' >> ~/.bash_profile #fo
 
 source ~/.bash_profile
 </pre>
-	<br>
 
-	<h3>启动和停止</h3>
+<h3>启动和停止</h3>
 <pre>	
 # 启动 php-fpm
 php-fpm -D
@@ -244,9 +231,8 @@ sudo kill -TERM `cat /usr/local/var/run/nginx.pid`
 kill -QUIT `cat /usr/local/var/run/nginx.pid`
 sudo kill -QUIT `cat /usr/local/var/run/nginx.pid`
 </pre>
-	<br>
 
-	<h3>修改配置</h3>
+<h3>修改配置</h3>
 <pre>
 # vhsot
 vim /usr/local/etc/nginx/vhosts/www.imaibo.local.conf
@@ -257,9 +243,7 @@ vim /usr/local/etc/php/5.6/php-fpm.conf
 # nginx
 vim /usr/local/etc/nginx/nginx.conf
 </pre>
-	<br>
-	
-	<h3>查看进程</h3>
+<h3>查看进程</h3>
 <pre>
 # 查看nginx进程
 ps aux|grep nginx
@@ -267,9 +251,8 @@ ps aux|grep nginx
 # 查看php-fpm进程
 ps aux|grep php-fpm
 </pre>
-	<br>
 	
-	<h3>总结</h3>
+<h3>总结</h3>
 <pre>
 # nginx 日志目录路径
 /usr/local/var/log/nginx/
@@ -311,12 +294,11 @@ lsof -n -i4TCP:8080 | grep LISTEN
 lsof -i tcp:8080
 lsof -i tcp:80
 </pre>
-	
-&nbsp;
+</div>
 
-	<div class="update-time">
+<div class="update-time">
 		{{ page.date | date_to_string }}
-	</div>
+</div>
 </section>
 
 

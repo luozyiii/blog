@@ -17,7 +17,7 @@
 		<meta name="browsermode" content="application" />
 		<meta name="x5-page-mode" content="app" />
 		<meta name="msapplication-tap-highlight" content="no" />
-		<title>{{ page.title }}</title>
+		<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/reset.css">
 		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/blog.css">
 　　	</head>

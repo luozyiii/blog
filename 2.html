@@ -1,16 +1,16 @@
 ---
 layout: default
-title: 枫
+title: 前端设计
 ---
 
 <header class="header">
 	<h1>枫 —— 分享自己的技术知识和最新前端知识。</h1>
 </header><!-- /header -->
 
-<h3 class="type">最新文章</h3>
+<h3 class="type">前端设计</h3>
 <div class="g-content">
 	<ul class="m-list">
-		{% for post in site.posts %}
+		{% for ui in site.categories %}
 		<li>
 			<div class="title">
 				<a href="{{ site.baseurl }}{{ post.url }}" target="_blank">{{ post.title }}</a>

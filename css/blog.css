@@ -100,6 +100,7 @@ pre {
 	color: #fff;
 	text-decoration: none;
 }
+.m-nav .type li a.active,
 .m-nav .type li a:hover {
 	background-color: #fe7210;
 }

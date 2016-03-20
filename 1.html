@@ -5,18 +5,13 @@ title: 前端开发
 
 <h3 class="type">前端开发</h3>
 <div class="g-content">
-	<ul class="m-list">
-		{% for qianduan in site.categories %}
-			{% for post in qianduan.last %}
-			<li>
-				<div class="title">
-					<a href="{{ site.baseurl }}{{ post.url }}" target="_blank">{{ post.title }}</a>
-				</div>	
-				<div class="update-time">
-					{{ post.date | date_to_string }} 
-				</div>
-			</li>
-			{% endfor %}
-		{% endfor %}
+	{% for category in site.categories %}
+	<h2>{{ category | first }}</h2>
+	</span>{{ category | last | size }}</span>
+	<ul class="arc-list">
+	    {% for post in category.last %}
+	        <li>{{ post.date | date:"%d/%m/%Y"}}<a href="{{ post.url }}">{{ post.title }}</a></li>
+	    {% endfor %}
 	</ul>
+	{% endfor %}
 </div>

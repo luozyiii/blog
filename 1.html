@@ -3,15 +3,11 @@ layout: default
 title: 前端开发
 ---
 
-<header class="header">
-	<h1>枫 —— 分享自己的技术知识和最新前端知识。</h1>
-</header><!-- /header -->
-
 <h3 class="type">前端开发</h3>
 <div class="g-content">
 	<ul class="m-list">
 		{% for qianduan in site.categories %}
-			{% for post in category.last %}
+			{% for post in qianduan.last %}
 			<li>
 				<div class="title">
 					<a href="{{ site.baseurl }}{{ post.url }}" target="_blank">{{ post.title }}</a>

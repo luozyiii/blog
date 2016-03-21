@@ -9,7 +9,6 @@ describe: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）�
 
 ### 安装Homebrew ###
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-&nbsp;
 
 ### formula ###
     brew tap homebrew/dupes
@@ -17,7 +16,6 @@ describe: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）�
     brew tap homebrew/versions
 
     brew tap homebrew/php
-&nbsp;
 
 ### 安装PHP5.6 ###
     brew install php56 \
@@ -30,18 +28,17 @@ describe: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）�
     --with-imap \
     --with-mysql \
     --with-tidy
-&nbsp;
 
 ### 安装扩展 ###
 
 * Memcache *
+
     brew install php56-memcache
-&nbsp;
 
 * Mongo *
+
     brew install php56-mongo
   
-&nbsp;
 
 * Redis *
 
@@ -52,26 +49,20 @@ describe: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）�
 > brew link --overwrite php56-igbinary
 
     brew install php56-redis
-&nbsp;
 
 ### php日志目录 ###
     mkdir -p /usr/local/var/log/php
-&nbsp;
-
 
 ### 安装Nginx ###
     brew install nginx
-&nbsp;
 
 ### 相关目录 ###
     mkdir -p /usr/local/var/log/nginx
 
     mkdir -p /usr/local/etc/nginx/
-&nbsp;
 
 ### ngnix.conf配置内容如下： ###
     vim /usr/local/etc/nginx/nginx.conf
-&nbsp;
 
     user _www _www;
 
@@ -128,7 +119,6 @@ describe: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）�
         # 虚拟主机配置
         include /usr/local/etc/nginx/vhosts/*;
     }
-&nbsp;
 
 ### 虚拟主机配置 ###
 
@@ -158,11 +148,9 @@ describe: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）�
 
         access_log /usr/local/var/log/nginx/www.imaibo.local.access.log main;
     }
-&nbsp;
 
 ### 配置php-fpm.conf ###
     vim /usr/local/etc/php/5.6/php-fpm.conf
-&nbsp;
 
     pid = run/php-fpm.pid # 目录在/usr/local/var
 
@@ -182,7 +170,6 @@ describe: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）�
     slowlog = /usr/local/var/log/php/$pool.log.slow
     request_slowlog_timeout = 10
     request_terminate_timeout = 300
-&nbsp;
 
 ### 加入环境变量配置 ###
     echo 'export PATH="$(brew --prefix php56)/bin:$PATH"' >> ~/.bash_profile  #for php
@@ -192,11 +179,9 @@ describe: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）�
     echo 'export PATH="/usr/local/bin:/usr/local/sbin:$PATH"' >> ~/.bash_profile #for other brew install soft
 
     source ~/.bash_profile
-&nbsp;
 
 ### 启动和停止 ###
 
-&nbsp;
 
 ##### 启动 php-fpm #####
     php-fpm -D
@@ -217,11 +202,9 @@ describe: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）�
 ##### 从容关闭 #####
     kill -QUIT `cat /usr/local/var/run/nginx.pid`
     sudo kill -QUIT `cat /usr/local/var/run/nginx.pid`
-&nbsp;
 
 ### 修改配置 ###
 
-&nbsp;
 
 #### vhsot ####
     vim /usr/local/etc/nginx/vhosts/www.imaibo.local.conf
@@ -232,11 +215,8 @@ describe: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）�
 #### nginx ####
     vim /usr/local/etc/nginx/nginx.conf
 
-&nbsp;
-
 ### 查看进程 ###
 
-&nbsp;
 
 #### 查看nginx进程 ####
     ps aux|grep nginx
@@ -244,11 +224,9 @@ describe: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）�
 #### 查看php-fpm进程 ####
     ps aux|grep php-fpm
 
-&nbsp;
 
 ### 总结 ###
 
-&nbsp;
 
 #### nginx 日志目录路径 ####
     /usr/local/var/log/nginx/

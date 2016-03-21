@@ -17,8 +17,6 @@ describe: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）�
     brew tap homebrew/versions
 
     brew tap homebrew/php
-
-  
 &nbsp;
 
 ### 安装PHP5.6 ###
@@ -33,14 +31,12 @@ describe: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）�
     --with-imap \
     --with-mysql \
     --with-tidy
-  
 &nbsp;
 
 ### 安装扩展 ###
 
 *Memcache*
     brew install php56-memcache
-  
 &nbsp;
 
 *Mongo*
@@ -49,41 +45,32 @@ describe: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）�
 &nbsp;
 
 *Redis*
-> 在安装时发生了错误，可能与使用josegonzalez/php有关
+>在安装时发生了错误，可能与使用josegonzalez/php有关
+>
+>brew unlink php56-igbinary
 > 
-> brew unlink php56-igbinary
-> 
-> brew link --overwrite php56-igbinary
+>brew link --overwrite php56-igbinary
 
     brew install php56-redis
-
 &nbsp;
 
 ### php日志目录 ###
-
     mkdir -p /usr/local/var/log/php
-
 &nbsp;
 
 
 ### 安装Nginx ###
-
     brew install nginx
-
 &nbsp;
 
 ### 相关目录 ###
-
     mkdir -p /usr/local/var/log/nginx
 
     mkdir -p /usr/local/etc/nginx/
-
 &nbsp;
 
 ### ngnix.conf配置内容如下： ###
-
     vim /usr/local/etc/nginx/nginx.conf
-
 &nbsp;
 
     user _www _www;
@@ -95,7 +82,7 @@ describe: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）�
     pid /usr/local/var/run/nginx.pid;
 
     events {
-    worker_connections  256;
+        worker_connections  256;
     }
 
     http {
@@ -141,7 +128,6 @@ describe: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）�
         # 虚拟主机配置
         include /usr/local/etc/nginx/vhosts/*;
     }
-  
 &nbsp;
 
 ### 虚拟主机配置 ###
@@ -157,28 +143,25 @@ describe: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）�
         root /Users/happy/coding/svn_now/imaibo/trunk/;
 
         location ~ .*\.php$ {
-          fastcgi_pass unix:/tmp/php-fpm.sock;
-          fastcgi_index index.php;
-          include /usr/local/etc/nginx/fastcgi.conf;
+            fastcgi_pass unix:/tmp/php-fpm.sock;
+            fastcgi_index index.php;
+            include /usr/local/etc/nginx/fastcgi.conf;
         }
 
         location ~ .*\.(gif|jpg|jpeg|png|bmp|swf)$ {
-          expires 30d;
+            expires 30d;
         }
 
         location ~ .*\.(js|css)?$ {
-          expires 1d;
+            expires 1d;
         }
 
         access_log /usr/local/var/log/nginx/www.imaibo.local.access.log main;
     }
-  
 &nbsp;
 
 ### 配置php-fpm.conf ###
-
     vim /usr/local/etc/php/5.6/php-fpm.conf
-  
 &nbsp;
 
     pid = run/php-fpm.pid # 目录在/usr/local/var
@@ -199,11 +182,9 @@ describe: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）�
     slowlog = /usr/local/var/log/php/$pool.log.slow
     request_slowlog_timeout = 10
     request_terminate_timeout = 300
-
 &nbsp;
 
 ### 加入环境变量配置 ###
-
     echo 'export PATH="$(brew --prefix php56)/bin:$PATH"' >> ~/.bash_profile  #for php
 
     echo 'export PATH="$(brew --prefix php56)/sbin:$PATH"' >> ~/.bash_profile  #for php-fpm
@@ -211,101 +192,98 @@ describe: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）�
     echo 'export PATH="/usr/local/bin:/usr/local/sbin:$PATH"' >> ~/.bash_profile #for other brew install soft
 
     source ~/.bash_profile
-
 &nbsp;
 
-## 启动和停止 ##
+### 启动和停止 ###
 
-# 启动 php-fpm #
+##### 启动 php-fpm #####
     php-fpm -D
     sudo php-fpm -D
 
-# 关闭 #
+##### 关闭 #####
     killall php-fpm
     sudo killall php-fpm
 
-# 开启 #
+##### 开启 #####
     nginx
     sudo nginx
 
-# 关闭 #
+##### 关闭 #####
     kill -TERM `cat /usr/local/var/run/nginx.pid`
     sudo kill -TERM `cat /usr/local/var/run/nginx.pid`
 
-# 从容关闭 #
+##### 从容关闭 #####
     kill -QUIT `cat /usr/local/var/run/nginx.pid`
     sudo kill -QUIT `cat /usr/local/var/run/nginx.pid`
 
 &nbsp;
 
-## 修改配置 ##
-# vhsot #
+### 修改配置 ###
+#### vhsot ####
     vim /usr/local/etc/nginx/vhosts/www.imaibo.local.conf
 
-# php-fpm #
+#### php-fpm ####
     vim /usr/local/etc/php/5.6/php-fpm.conf
 
-# nginx #
+#### nginx ####
     vim /usr/local/etc/nginx/nginx.conf
 
 &nbsp;
 
-## 查看进程 #
+#### 查看进程 ###
 
-# 查看nginx进程 #
+#### 查看nginx进程 ####
     ps aux|grep nginx
 
-# 查看php-fpm进程 #
+#### 查看php-fpm进程 ####
     ps aux|grep php-fpm
 
 &nbsp;
   
-## 总结 ##
+### 总结 ###
 
-# nginx 日志目录路径 #
+#### nginx 日志目录路径 ####
     /usr/local/var/log/nginx/
 
-# php 日志目录路径 #
+#### php 日志目录路径 ####
     /usr/local/var/log/php/
 
-# 虚拟主机目录路径 #
+#### 虚拟主机目录路径 ####
     /usr/local/etc/nginx/vhosts
 
 
-# nginx.conf 配置 #
+#### nginx.conf 配置 ####
     /usr/local/etc/nginx/nginx.conf
 
-# php-fpm.conf 配置 #
+#### php-fpm.conf 配置 ####
     /usr/local/etc/php/5.6/php-fpm.conf
 
-# fastcgi.conf 配置 #
+#### fastcgi.conf 配置 ####
     /usr/local/etc/nginx/fastcgi.conf;
 
-# nginx 错误日志 #
+#### nginx 错误日志 ####
     /usr/local/var/log/nginx/error.log
 
-# php-fpm 错误日志 #
+#### php-fpm 错误日志 ####
     /usr/local/var/log/php-fpm.log
 
-# nginx.pid 文件 #
+#### nginx.pid 文件 ####
     /usr/local/var/run/nginx.pid
 
-# php-fpm.sock 文件 #
-# /usr/local/var/run/php-fpm.sock
+#### php-fpm.sock 文件 ####
+#### /usr/local/var/run/php-fpm.sock
     /tmp/php-fcgi.sock
 
 
-# 端口查看 #
+#### 端口查看 ####
     sudo lsof -i -P | grep -i "listen"
     lsof -iTCP:8080 | grep LISTEN
     lsof -n -i4TCP:8080 | grep LISTEN
     lsof -i tcp:8080
     lsof -i tcp:80
-  
 &nbsp;
 
     brew unlink php56
-
 &nbsp;
 
     brew install php56 \
@@ -319,11 +297,9 @@ describe: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）�
     --with-imap \
     --with-mysql \
     --with-tidy
-
 &nbsp;
 
     source ~/.bash_profile
-
 &nbsp;
 
 

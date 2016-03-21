@@ -39,7 +39,6 @@ describe: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）�
 
     brew install php56-mongo
   
-
 * Redis *
 
 > 在安装时发生了错误，可能与使用josegonzalez/php有关
@@ -181,8 +180,6 @@ describe: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）�
     source ~/.bash_profile
 
 ### 启动和停止 ###
-
-
 ##### 启动 php-fpm #####
     php-fpm -D
     sudo php-fpm -D
@@ -203,9 +200,8 @@ describe: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）�
     kill -QUIT `cat /usr/local/var/run/nginx.pid`
     sudo kill -QUIT `cat /usr/local/var/run/nginx.pid`
 
+
 ### 修改配置 ###
-
-
 #### vhsot ####
     vim /usr/local/etc/nginx/vhosts/www.imaibo.local.conf
 
@@ -226,8 +222,6 @@ describe: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）�
 
 
 ### 总结 ###
-
-
 #### nginx 日志目录路径 ####
     /usr/local/var/log/nginx/
 
@@ -236,7 +230,6 @@ describe: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）�
 
 #### 虚拟主机目录路径 ####
     /usr/local/etc/nginx/vhosts
-
 
 #### nginx.conf 配置 ####
     /usr/local/etc/nginx/nginx.conf
@@ -260,12 +253,9 @@ describe: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）�
     /usr/local/var/run/php-fpm.sock
     /tmp/php-fcgi.sock
 
-
 #### 端口查看 ####
     sudo lsof -i -P | grep -i "listen"
     lsof -iTCP:8080 | grep LISTEN
     lsof -n -i4TCP:8080 | grep LISTEN
     lsof -i tcp:8080
     lsof -i tcp:80
-
-

@@ -31,15 +31,15 @@ describe: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）�
 
 ### 安装扩展 ###
 
-* Memcache *
+*Memcache*
 
     brew install php56-memcache
 
-* Mongo *
+*Mongo*
 
     brew install php56-mongo
   
-* Redis *
+*Redis*
 
 > 在安装时发生了错误，可能与使用josegonzalez/php有关
 >

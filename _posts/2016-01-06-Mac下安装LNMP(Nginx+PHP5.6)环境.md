@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Mac下安装LNMP(Nginx+PHP5.6)环境
-CUSTOM: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）为例，记录一下从零开始安装Mac下LNMP环境的过程
+excerpt: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）为例，记录一下从零开始安装Mac下LNMP环境的过程
 ---
 
 <header class="header">

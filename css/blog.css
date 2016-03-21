@@ -191,21 +191,9 @@ pre {
 	z-index: 2;
 }
 .m-article .des {
-	position: relative;
 	height: 50px;
 	padding: 30px;
-	line-height:1.4em;
-    height:4.2em;
     overflow:hidden;
-}
-.m-article .des::after {
-	content:"...";
-    font-weight:bold;
-    position:absolute;
-    bottom:0;
-    right:0;
-    padding:0 20px 1px 45px;
-    background:url(http://css88.b0.upaiyun.com/css88/2014/09/ellipsis_bg.png) repeat-y;
 }
 .m-article .info {
 	text-indent: 30px;

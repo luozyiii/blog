@@ -206,6 +206,7 @@ pre {
 
 /*文章内容*/
 .m-detail {
+	margin-bottom: 30px;
 	padding: 30px;
 	background-color: #fff;
 }
@@ -213,6 +214,7 @@ pre {
 	margin-top: 20px;
 }
 .m-detail .content {
+	min-height: 200px;
 	margin-top: 20px;
 }
 

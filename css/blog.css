@@ -134,6 +134,7 @@ pre {
 	position: relative;
 	width: 530px;
 	height: 390px;
+	margin-top: 20px;
 	overflow: hidden;
 }
 .m-article li:nth-child(2n) {

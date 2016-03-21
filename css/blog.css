@@ -95,6 +95,15 @@ pre {
 	height: 100px;
 	background-color: #fff;
 }
+.m-footer .link-ued {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.m-footer .link-ued a {
+	padding-right: 10px;
+	text-decoration: none;
+	color: #555;
+}
 
 /*首页*/
 .header {
@@ -134,11 +143,12 @@ pre {
 	position: relative;
 	width: 530px;
 	height: 390px;
-	margin-top: 20px;
+	margin-top: 30px;
+	background-color: #fff;
 	overflow: hidden;
 }
 .m-article li:nth-child(2n) {
-	margin-left: 20px;
+	margin-left: 30px;
 }
 .m-article .pic {
 	position: relative;
@@ -173,7 +183,7 @@ pre {
 	padding: 30px;
 }
 .m-article .tag {
-	padding: 0 10px;
+	padding: 0 6px;
 	color: #ff7300;
 }
 

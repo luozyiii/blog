@@ -3,20 +3,24 @@ layout: default
 title: 枫
 ---
 
-<header class="header">
-	<h1>枫 —— 分享自己的技术知识和最新前端知识。</h1>
-</header><!-- /header -->
-
-<h3 class="type">最新文章</h3>
-<div class="g-content">
-	<ul class="m-list">
-		{% for post in site.posts %}
-		<li>
-			<div class="title">
-				<a href="{{ site.baseurl }}{{ post.url }}" target="_blank">{{ post.title }}</a>
-			</div>	
-			<div class="update-time">
-				{{ post.date | date_to_string }} 
+<div class="container">
+	<ul class="clearfix m-article">
+		{% for post in site.categories.CATEGORY %}
+		<li class="f-left">
+			<a class="link" href="{{ site.baseurl }}{{ post.url }}" target="_blank"></a>
+			<div class="pic">
+				<img src="{{ site.baseurl }}/images/arc-1.jpg" alt="">
+				<div class="title">
+					{{ post.title }}
+				</div>
+			</div>
+			<div class="des">
+				{{ post.CUSTOM }}
+			</div>
+			<div class="info">
+				<span>作者：罗智毅&nbsp;&nbsp;|</span>
+				<span class="tag">前端开发，用户体验</span>
+				<span>|&nbsp;&nbsp;{{ post.date | date_to_string }}</span>
 			</div>
 		</li>
 		{% endfor %}

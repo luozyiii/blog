@@ -191,7 +191,12 @@ pre {
 	z-index: 2;
 }
 .m-article .des {
+	height: 50px;
 	padding: 30px;
+	display:block;
+	white-space:nowrap;
+	overflow:hidden; 
+	text-overflow:ellipsis;
 }
 .m-article .info {
 	text-indent: 30px;

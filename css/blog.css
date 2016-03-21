@@ -130,10 +130,6 @@ pre {
 	margin-bottom: 8px;
 	overflow: hidden;
 }
-.m-list li:hover {
-	-webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
 .m-list .title {
 	font-size: 14px;
 }
@@ -157,6 +153,10 @@ pre {
     -o-transition: box-shadow 0.3s;
     transition: box-shadow 0.3s;
 	overflow: hidden;
+}
+.m-article li:hover {
+	-webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .m-article li:nth-child(2n) {
 	margin-left: 30px;

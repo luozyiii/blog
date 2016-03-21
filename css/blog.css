@@ -96,7 +96,8 @@ pre {
 	background-color: #fff;
 }
 .m-footer .link-ued {
-	padding-top: 10px;
+    margin-bottom: 14px;
+    padding-top: 24px;
 }
 .m-footer .link-ued a {
 	padding-right: 10px;
@@ -128,6 +129,14 @@ pre {
 	height: 390px;
 	margin-bottom: 8px;
 	overflow: hidden;
+	-moz-transition: box-shadow 0.3s;
+    -webkit-transition: box-shadow 0.3s;
+    -o-transition: box-shadow 0.3s;
+    transition: box-shadow 0.3s;
+}
+.m-list li:hover {
+	-webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .m-list .title {
 	font-size: 14px;

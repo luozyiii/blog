@@ -23,7 +23,6 @@ describe: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）�
     brew install php56 \
     --without-snmp \
     --without-apache \
-    --without-debug \
     --with-fpm \
     --with-intl \
     --with-homebrew-curl \
@@ -36,15 +35,18 @@ describe: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）�
 ### 安装扩展 ###
 
 *Memcache*
+
     brew install php56-memcache
 &nbsp;
 
 *Mongo*
+
     brew install php56-mongo
   
 &nbsp;
 
 *Redis*
+
 >在安装时发生了错误，可能与使用josegonzalez/php有关
 >
 >brew unlink php56-igbinary
@@ -277,28 +279,5 @@ describe: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）�
     lsof -n -i4TCP:8080 | grep LISTEN
     lsof -i tcp:8080
     lsof -i tcp:80
-
-&nbsp;
-
-    brew unlink php56
-
-&nbsp;
-
-    brew install php56 \
-    --without-snmp \
-    --without-apache \
-    --without-debug \
-    --with-fpm \
-    --with-intl \
-    --with-homebrew-curl \
-    --with-homebrew-libxslt \
-    --with-imap \
-    --with-mysql \
-    --with-tidy
-
-&nbsp;
-
-    source ~/.bash_profile
-&nbsp;
 
 

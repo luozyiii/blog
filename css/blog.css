@@ -96,8 +96,7 @@ pre {
 	background-color: #fff;
 }
 .m-footer .link-ued {
-	margin-top: 10px;
-	margin-bottom: 10px;
+	padding-top: 10px;
 }
 .m-footer .link-ued a {
 	padding-right: 10px;
@@ -181,6 +180,9 @@ pre {
 }
 .m-article .des {
 	padding: 30px;
+}
+.m-article .info {
+	text-indent: 30px;
 }
 .m-article .tag {
 	padding: 0 6px;

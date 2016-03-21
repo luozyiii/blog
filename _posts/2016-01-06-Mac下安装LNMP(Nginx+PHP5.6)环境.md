@@ -35,12 +35,10 @@ describe: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）�
 ### 安装扩展 ###
 
 * Memcache *
-
     brew install php56-memcache
 &nbsp;
 
 * Mongo *
-
     brew install php56-mongo
   
 &nbsp;
@@ -199,6 +197,7 @@ describe: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）�
 ### 启动和停止 ###
 
 &nbsp;
+
 ##### 启动 php-fpm #####
     php-fpm -D
     sudo php-fpm -D
@@ -223,6 +222,7 @@ describe: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）�
 ### 修改配置 ###
 
 &nbsp;
+
 #### vhsot ####
     vim /usr/local/etc/nginx/vhosts/www.imaibo.local.conf
 
@@ -237,6 +237,7 @@ describe: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）�
 ### 查看进程 ###
 
 &nbsp;
+
 #### 查看nginx进程 ####
     ps aux|grep nginx
 
@@ -248,6 +249,7 @@ describe: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）�
 ### 总结 ###
 
 &nbsp;
+
 #### nginx 日志目录路径 ####
     /usr/local/var/log/nginx/
 

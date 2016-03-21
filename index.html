@@ -3,14 +3,25 @@ layout: default
 title: 枫
 ---
 
-<h3 class="type">最新文章</h3>
-<div class="g-content">
-	<ul class="m-list">
+<div class="container">
+	<ul class="clearfix m-article">
 		{% for post in site.posts %}
-		<li>
+		<li class="f-left">
+			<div class="pic">
+				<img src="{{ site.baseurl }}/images/arc-1.jpg" alt="">
+			</div>
 			<div class="title">
 				<a href="{{ site.baseurl }}{{ post.url }}" target="_blank">{{ post.title }}</a>
 			</div>	
+			<div class="des">
+				如果说我们做的业务最终输出的是一首歌，那我们设计师就是歌曲的编曲者。产品和运营进行歌曲本身的创作，我们设计师在了解了歌曲主题、听众是谁之后，选择乐器进行编配，最终输出...
+			</div>
+			<div class="info">
+				<span>作者：罗智毅 |</span>
+				<span class="tag">前端开发，用户体验</span>
+				<span>| 二月 28th, 2016</span>
+			</div>
+
 			<div class="update-time">
 				{{ post.date | date_to_string }} 
 			</div>

@@ -100,6 +100,7 @@ span,p,pre {
 
 /*文章列表*/
 .m-article {
+	min-height: 500px;
 	margin-bottom: 30px;
 }
 .m-article li {
@@ -175,7 +176,7 @@ span,p,pre {
 	margin-top: 20px;
 }
 .m-detail .content {
-	min-height: 200px;
+	min-height: 500px;
 	margin-top: 20px;
 }
 .m-detail .content img {

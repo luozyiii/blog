@@ -35,11 +35,10 @@ caption, th {
     text-align: left;
 }
 body {
-    margin: 0;
-    font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Helvetica Neue", Helvetica, Arial, "Microsoft YaHei", "Hiragino Sans GB", "Hiragino Sans GB W3", "WenQuanYi Micro Hei", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    color: #000;
-    background-color: #eeeeee;
+    font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+    font-size: 14px;
+    background-color: #f5f5f5;
+    color: #555;
     overflow-x: hidden;
 }
 h1, h2, h3, h4, h5, h6, ul, li {

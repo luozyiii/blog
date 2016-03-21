@@ -198,13 +198,23 @@ pre {
 .m-article .info {
 	text-indent: 30px;
 }
-.m-article .tag {
+.m-article .tag,
+.m-detail .tag {
 	padding: 0 6px;
 	color: #ff7300;
 }
 
-
-
+/*文章内容*/
+.m-detail {
+	padding: 30px;
+	background-color: #fff;
+}
+.m-detail .info {
+	text-indent: 30px;
+}
+.m-detail .content {
+	margin-top: 20px;
+}
 
 
 

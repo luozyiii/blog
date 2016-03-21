@@ -195,7 +195,9 @@ describe: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）�
 
     source ~/.bash_profile
 &nbsp;
+
 ### 启动和停止 ###
+
 &nbsp;
 ##### 启动 php-fpm #####
     php-fpm -D
@@ -217,7 +219,9 @@ describe: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）�
     kill -QUIT `cat /usr/local/var/run/nginx.pid`
     sudo kill -QUIT `cat /usr/local/var/run/nginx.pid`
 &nbsp;
+
 ### 修改配置 ###
+
 &nbsp;
 #### vhsot ####
     vim /usr/local/etc/nginx/vhosts/www.imaibo.local.conf
@@ -229,7 +233,9 @@ describe: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）�
     vim /usr/local/etc/nginx/nginx.conf
 
 &nbsp;
-#### 查看进程 ###
+
+### 查看进程 ###
+
 &nbsp;
 #### 查看nginx进程 ####
     ps aux|grep nginx
@@ -238,7 +244,9 @@ describe: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）�
     ps aux|grep php-fpm
 
 &nbsp;
+
 ### 总结 ###
+
 &nbsp;
 #### nginx 日志目录路径 ####
     /usr/local/var/log/nginx/

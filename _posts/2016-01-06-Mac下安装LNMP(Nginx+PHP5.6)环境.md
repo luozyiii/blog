@@ -99,47 +99,47 @@ describe: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）�
     }
 
     http {
-     include       mime.types;
-     default_type  application/octet-stream;
+        include       mime.types;
+        default_type  application/octet-stream;
 
-     server_names_hash_bucket_size 128;
-     client_header_buffer_size 32k;
-     large_client_header_buffers 4 32k;
-     client_max_body_size 8m;
+        server_names_hash_bucket_size 128;
+        client_header_buffer_size 32k;
+        large_client_header_buffers 4 32k;
+        client_max_body_size 8m;
 
-     sendfile on;
-     tcp_nopush on;
-     tcp_nodelay on;
+        sendfile on;
+        tcp_nopush on;
+        tcp_nodelay on;
 
-     keepalive_timeout 60;
+        keepalive_timeout 60;
 
-     # fastcgi
-     fastcgi_connect_timeout 300;
-     fastcgi_send_timeout 300;
-     fastcgi_read_timeout 300;
-     fastcgi_buffer_size 64k;
-     fastcgi_buffers 4 64k;
-     fastcgi_busy_buffers_size 128k;
-     fastcgi_temp_file_write_size 128k;
+        # fastcgi
+        fastcgi_connect_timeout 300;
+        fastcgi_send_timeout 300;
+        fastcgi_read_timeout 300;
+        fastcgi_buffer_size 64k;
+        fastcgi_buffers 4 64k;
+        fastcgi_busy_buffers_size 128k;
+        fastcgi_temp_file_write_size 128k;
 
-     # gzip
-     gzip on;
-     gzip_min_length 1k;
-     gzip_buffers 4 16k;
-     gzip_http_version 1.0;
-     gzip_comp_level 2;
-     gzip_types text/plain application/x-javascript text/css application/xml;
-     gzip_vary on;
+        # gzip
+        gzip on;
+        gzip_min_length 1k;
+        gzip_buffers 4 16k;
+        gzip_http_version 1.0;
+        gzip_comp_level 2;
+        gzip_types text/plain application/x-javascript text/css application/xml;
+        gzip_vary on;
 
-     # log format
-     log_format main ‘$remote_addr - $remote_user [$time_local] ‘
+        # log format
+        log_format main ‘$remote_addr - $remote_user [$time_local] ‘
          ‘”$request” $status $body_bytes_sent ‘
          ‘”$http_referer” “$http_user_agent” ‘
          ‘”$http_x_forwarded_for” $host $request_time $upstream_response_time $scheme ‘
          ‘$cookie_evalogin’;
 
-     # 虚拟主机配置
-     include /usr/local/etc/nginx/vhosts/*;
+        # 虚拟主机配置
+        include /usr/local/etc/nginx/vhosts/*;
     }
   
 &nbsp;
@@ -149,28 +149,28 @@ describe: 最近工作环境切换到Mac，所以以OS X Yosemite（10.10.1）�
 > 在/usr/local/etc/nignx/vhosts/目录下，增加 [主机名].conf 文件
 
     server {
-      listen 80;
-      # 需要配置的域名
-      server_name www.imaibo.local;
-      index index.html index.htm index.php;
-      # 站点根目录
-      root /Users/happy/coding/svn_now/imaibo/trunk/;
+        listen 80;
+        # 需要配置的域名
+        server_name www.imaibo.local;
+        index index.html index.htm index.php;
+        # 站点根目录
+        root /Users/happy/coding/svn_now/imaibo/trunk/;
 
-      location ~ .*\.php$ {
+        location ~ .*\.php$ {
           fastcgi_pass unix:/tmp/php-fpm.sock;
           fastcgi_index index.php;
           include /usr/local/etc/nginx/fastcgi.conf;
-      }
+        }
 
-      location ~ .*\.(gif|jpg|jpeg|png|bmp|swf)$ {
+        location ~ .*\.(gif|jpg|jpeg|png|bmp|swf)$ {
           expires 30d;
-      }
+        }
 
-      location ~ .*\.(js|css)?$ {
+        location ~ .*\.(js|css)?$ {
           expires 1d;
-      }
+        }
 
-      access_log /usr/local/var/log/nginx/www.imaibo.local.access.log main;
+        access_log /usr/local/var/log/nginx/www.imaibo.local.access.log main;
     }
   
 &nbsp;

@@ -3,26 +3,24 @@ layout: default
 title: 枫
 ---
 
-<div class="container">
-	<ul class="clearfix m-article">
-		{% for post in site.posts %}
-		<li class="f-left">
-			<a class="link" href="{{ site.baseurl }}{{ post.url }}" target="_blank"></a>
-			<div class="pic">
-				<img src="{{ site.baseurl }}/images/{{post.picSrc}}" alt="">
-				<div class="title">
-					{{ post.title }}
-				</div>
+<ul class="clearfix m-article">
+	{% for post in site.posts %}
+	<li class="f-left">
+		<a class="link" href="{{ site.baseurl }}{{ post.url }}" target="_blank"></a>
+		<div class="pic">
+			<img src="{{ site.baseurl }}/images/{{post.picSrc}}" alt="">
+			<div class="title">
+				{{ post.title }}
 			</div>
-			<div class="des">
-				{{ post.describe }}
-			</div>
-			<div class="info">
-				<span>作者：{{ post.author }}&nbsp;&nbsp;|</span>
-				<span class="tag">前端开发，用户体验</span>
-				<span>|&nbsp;&nbsp;{{ post.date | date_to_string }}</span>
-			</div>
-		</li>
-		{% endfor %}
-	</ul>
-</div>
+		</div>
+		<div class="des">
+			{{ post.describe }}
+		</div>
+		<div class="info">
+			<span>作者：{{ post.author }}&nbsp;&nbsp;|</span>
+			<span class="tag">前端开发，用户体验</span>
+			<span>|&nbsp;&nbsp;{{ post.date | date_to_string }}</span>
+		</div>
+	</li>
+	{% endfor %}
+</ul>

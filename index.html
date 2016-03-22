@@ -17,11 +17,11 @@ title: 枫
 			{{ post.describe }}
 		</div>
 		<div class="info">
-			<span>作者：{{ post.author }}&nbsp;&nbsp;|</span>
+			<span>作者：{{ post.author }}&nbsp;|</span>
 			{% for tag in post.tags %}
 			    <span class="tag">{{ tag }}</span>
 			{% endfor %}
-			<span>|&nbsp;&nbsp;{{ post.date | date_to_string }}</span>
+			<span>|&nbsp;{{ post.date | date_to_string }}</span>
 		</div>
 	</li>
 	{% endfor %}

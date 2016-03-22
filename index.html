@@ -19,7 +19,7 @@ title: 枫
 		<div class="info">
 			<span>作者：{{ post.author }}&nbsp;&nbsp;|</span>
 			<span class="tag">
-				{% for tag in site.tags %}
+				{% for tag in post.tags %}
 				    {{ tag[0] }},
 				{% endfor %}
 			</span>

@@ -241,7 +241,7 @@ div.m-detail {border:1px solid #e9e9e9;}
     width: 40px;
     height: 36px;
     border-radius: 2px;
-    background: url({{ site.baseurl }}/images/go-top.png) 8px 6px no-repeat;
+    background: url(images/go-top.png) 8px 6px no-repeat;
     background-color: #444;
     background-color: rgba(0,0,0,.6);
     cursor: pointer;

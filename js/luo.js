@@ -5,7 +5,7 @@ var LUO = {
         var _nav = $(".classification");
         if (_url.indexOf("web") >= 0) {
             _nav.removeClass("active");
-            _nav[1].find("a").addClass("active");
+            _nav[1].addClass("active");
         } 
     },
 	//返回顶部

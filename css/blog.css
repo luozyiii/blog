@@ -20,6 +20,9 @@ h6 {
 span,p,pre {
 	font-size: 14px;
 }
+body {
+	padding-top: 60px;
+}
 /*皮肤*/
 .s-red {
 	color: red;
@@ -101,7 +104,6 @@ span,p,pre {
 }
 /*banner*/
 .m-banner {
-	margin-top: 60px;
 	height: 240px;
 	background-color: #e7031c;
 }

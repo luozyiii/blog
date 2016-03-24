@@ -8,7 +8,7 @@ title: 前端设计
 		{% if post.type == 2 %}
 		<li class="f-left">
 
-			{% if otherUrl %}
+			{% if post.otherUrl %}
 				<a class="link" href="{{ post.otherUrl }}" target="_blank"></a>
 			{% else %}
 				<a class="link" href="{{ site.baseurl }}{{ post.url }}" target="_blank"></a>

@@ -6,7 +6,11 @@ title: 遇见
 <ul class="clearfix m-article">
 	{% for post in site.posts %}
 	<li class="f-left">
-		<a class="link" href="{{ site.baseurl }}{{ post.url }}" target="_blank"></a>
+		{% if post.otherUrl %}
+			<a class="link" href="{{ post.otherUrl }}" target="_blank"></a>
+		{% else %}
+			<a class="link" href="{{ site.baseurl }}{{ post.url }}" target="_blank"></a>
+		{% endif %}
 		<div class="pic">
 			<img src="{{ site.baseurl }}/images/{{post.picSrc}}" alt="">
 			<div class="title">

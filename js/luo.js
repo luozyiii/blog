@@ -2,10 +2,9 @@ var LUO = {
     //导航
     nav:function () {
         var _url = window.location.href;
-        var _nav = $(".classification");
         if (_url.indexOf("web") >= 0) {
             _nav.removeClass("active");
-            _nav[1].addClass("active");
+            $(".classification li:eq(2)").addClass("active");
         } 
     },
 	//返回顶部

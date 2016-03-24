@@ -90,6 +90,10 @@ span,p,pre {
 	margin-left: 10px;
 	color: #fff;
 	text-decoration: none;
+	-webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
 }
 .m-nav .classification li.active a,
 .m-nav .classification li a:hover {

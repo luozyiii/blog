@@ -61,12 +61,14 @@ span,p,pre {
 .m-nav {
 	position: fixed;
 	top: 0;
-	width: 1100px;
+	left: 0;
+	right: 0;
 	height: 60px;
 	overflow: hidden;
 	background-color: #191919;
 	color: #fff;
 	font-size: 14px;
+	z-index: 9;
 }
 .m-nav .logo img {
 	height: 60px;

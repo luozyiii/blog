@@ -1,0 +1,32 @@
+---
+layout: default
+title: 其它
+---
+
+<ul class="clearfix m-article">
+	{% for post in site.posts %}
+		{% if post.type == 3 %}
+		<li class="f-left">
+			<a class="link" href="{{ site.baseurl }}{{ post.url }}" target="_blank"></a>
+			<div class="pic">
+				<img src="{{ site.baseurl }}/images/{{post.picSrc}}" alt="">
+				<div class="title">
+					{{ post.title }}
+				</div>
+			</div>
+			<div class="des">
+				{{ post.describe }}
+			</div>
+			<div class="info">
+				<span>作者：{{ post.author }}&nbsp;|</span>
+				{% for tag in post.tags %}
+				    <span class="tag">{{ tag }}</span>
+				{% endfor %}
+				<span>|&nbsp;{{ post.date | date_to_string }}</span>
+			</div>
+		</li>
+		{% endif %}
+	{% endfor %}
+</ul>
+
+

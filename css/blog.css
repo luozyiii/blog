@@ -70,8 +70,10 @@ span,p,pre {
 }
 .m-nav .autograph {
 	height: 60px;
-	line-height: 60px;
-	font-size: 20px;
+    line-height: 60px;
+    font-size: 12px;
+    margin-left: 14px;
+    color: #fe7210;
 }
 .m-nav .classification li a {
 	display: block;

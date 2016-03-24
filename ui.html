@@ -7,7 +7,13 @@ title: 前端设计
 	{% for post in site.posts %}
 		{% if post.type == 2 %}
 		<li class="f-left">
-			<a class="link" href="{{ site.baseurl }}{{ post.url }}" target="_blank"></a>
+
+			{% if otherUrl %}
+				<a class="link" href="{{ post.otherUrl }}" target="_blank"></a>
+			{% else %}
+				<a class="link" href="{{ site.baseurl }}{{ post.url }}" target="_blank"></a>
+			{% endif %}
+
 			<div class="pic">
 				<img src="{{ site.baseurl }}/images/{{post.picSrc}}" alt="">
 				<div class="title">

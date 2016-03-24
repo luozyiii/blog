@@ -1,13 +1,13 @@
 var LUO = {
     //导航
     nav:function () {
-        var _url = window.location.pagename;
+        var _url = window.location.href;
         var _nav = $(".classification");
         console.log(_url);
-        // if (_url.test("web")) {
-        //     _nav.removeClass("active");
-        //     _nav[1].find("a").addClass("active");
-        // } 
+        if (_url.test("web")) {
+            _nav.removeClass("active");
+            _nav[1].find("a").addClass("active");
+        } 
     },
 	//返回顶部
     go_top:function(){

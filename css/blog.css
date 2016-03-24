@@ -89,7 +89,7 @@ span,p,pre {
 	color: #fff;
 	text-decoration: none;
 }
-.m-nav .classification li a.active,
+.m-nav .classification li.active a,
 .m-nav .classification li a:hover {
 	background-color: #fe7210;
 }

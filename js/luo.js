@@ -3,15 +3,15 @@ var LUO = {
     nav:function () {
         var _url = window.location.href;
         if (_url.indexOf("web") >= 0) {
-            $(".classification li:eq(2)").addClass("active");
+            $(".classification li:eq(1)").addClass("active");
         } else if(_url.indexOf("ui") >= 0) {
-            $(".classification li:eq(3)").addClass("active");
+            $(".classification li:eq(2)").addClass("active");
         } else if(_url.indexOf("other") >= 0) {
             $(".classification li:eq(3)").addClass("active");
         } else if(_url.indexOf("about") >= 0) {
-            $(".classification li:eq(4)").addClass("active");
+            $(".classification li:eq(3)").addClass("active");
         } else {
-            $(".classification li:eq(1)").addClass("active");
+            $(".classification li:eq(0)").addClass("active");
         }
     },
 	//返回顶部

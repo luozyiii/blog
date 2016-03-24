@@ -70,7 +70,9 @@ span,p,pre {
 	font-size: 14px;
 	z-index: 9;
 }
+.m-nav .logo,
 .m-nav .logo img {
+	width: 60px;
 	height: 60px;
 }
 .m-nav .autograph {

@@ -3,7 +3,7 @@ var LUO = {
     nav:function () {
         var _url = window.location.pagename;
         var _nav = $(".classification");
-        if (_url.indexOf("web") >= 0) {
+        if (_url.test("web")) {
             _nav.removeClass("active");
             _nav[1].find("a").addClass("active");
         } 

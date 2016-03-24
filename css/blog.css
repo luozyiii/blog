@@ -65,6 +65,14 @@ span,p,pre {
 	color: #fff;
 	font-size: 14px;
 }
+.m-nav .logo img {
+	height: 60px;
+}
+.m-nav .autograph {
+	height: 60px;
+	line-height: 60px;
+	font-size: 20px;
+}
 .m-nav .classification li a {
 	display: block;
 	height: 60px;

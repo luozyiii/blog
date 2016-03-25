@@ -9,8 +9,10 @@
 		<section class="container m-detail">
 			<h1 class="">{{ page.title }}</h1>
 			<p class="info">
-				<span>作者：{{ page.author }}&nbsp;&nbsp;|</span>
-				<span class="tag">前端开发，用户体验</span>
+				<span>采集：{{ page.author }}&nbsp;&nbsp;|</span>
+				{% for tag in page.tags %}
+				    <span class="tag">{{ tag }}</span>
+				{% endfor %}
 				<span>|&nbsp;&nbsp;{{ page.date | date_to_string }}</span>
 			</p>
 			<div class="content">

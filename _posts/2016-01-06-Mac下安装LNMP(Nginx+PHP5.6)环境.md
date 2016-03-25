@@ -1,7 +1,7 @@
 ---
 layout: detail
 title: Mac下安装LNMP(Nginx+PHP5.6)环境
-author: 罗智毅
+author: luo
 type: 3
 picSrc: arc-3.jpg
 tags: [LNMP环境,Mac下安装LNMP]

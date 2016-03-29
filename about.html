@@ -46,15 +46,15 @@ title: 关于作者
 	var prevMouseY;
 	var isMouseDown;
   	function init(){
-    canvas = document.getElementById("mainCanvas");
-    if ( canvas.getContext ){
-		setup();
-		setInterval( run , 33 );
-		trace('用鼠标控制，点击鼠标即可分散颗粒');
-    }
-    else{
-    	trace("Sorry,这个页面不支持你的浏览器，请尝试使用chrome、opera、firefox、IE9.");
-    }
+	    canvas = document.getElementById("mainCanvas");
+	    if ( canvas.getContext ){
+			setup();
+			setInterval( run , 33 );
+			trace('用鼠标控制，点击鼠标即可分散颗粒');
+	    }
+	    else{
+	    	trace("Sorry,这个页面不支持你的浏览器，请尝试使用chrome、opera、firefox、IE9.");
+	    }
   	}
   	function setup(){
 		outerDiv  = document.getElementById("outer");

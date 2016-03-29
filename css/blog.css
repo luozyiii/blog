@@ -269,6 +269,25 @@ div.m-detail {border:1px solid #e9e9e9;}
     box-shadow: 0 1px 3px rgba(0,0,0,.2);
 }
 
+/*关于我们*/
+#outer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1px;
+    height: 1px;
+    overflow: visible;
+}
+#canvasContainer {
+	position: absolute;
+	width: 1000px;
+	height: 560px;
+	top: -280px;
+	left: -500px;
+}
+canvas {
+	border: 1px solid #333333;
+}
 
 
 

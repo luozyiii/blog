@@ -7,11 +7,15 @@ title: 关于作者
 	body {
 		background-color: #000;
 	}
+	footer {
+		position: fixed;
+		bottom: 0;
+	}
 </style>
 <section class="m-article">
 	<div id="outer">
 		<div id="canvasContainer">
-		 	<canvas id="mainCanvas" width="1100" height="500"></canvas>
+		 	<canvas id="mainCanvas" width="1100" height="400"></canvas>
 		 	<div id="output"></div>
 		</div>
 	</div>
@@ -20,7 +24,7 @@ title: 关于作者
 (function(){
 	var PI_2        = Math.PI * 2;  
 	var canvasW     = 1100;
-	var canvasH     = 500;
+	var canvasH     = 400;
 	var numMovers   = 600;
 	var friction    = 0.96;
 	var movers      = [];

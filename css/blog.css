@@ -253,6 +253,7 @@ div.m-detail {border:1px solid #e9e9e9;}
 }
 .m-reading .number {
 	color: #fe7210;
+	font-size: 20px;
 }
 /*返回顶部*/
 .go-top {

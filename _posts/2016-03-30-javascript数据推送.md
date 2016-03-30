@@ -135,5 +135,6 @@ Comet 是一种 Web 应用架构。服务器端会主动以异步的方式向客
 
 
 > index.html
+
 	<mate charset="utf-8"/>
 	<script type="text/javascript" src="index.js"></script>

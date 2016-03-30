@@ -248,6 +248,12 @@ div.m-detail {border:1px solid #e9e9e9;}
 .m-detail .align-center{display:block;text-align:center;}
 .m-detail .align-right{display:block;text-align:right;}
 
+.m-reading {
+	font-size: 20px;
+}
+.m-reading .number {
+	color: #fe7210;
+}
 /*返回顶部*/
 .go-top {
 	position: fixed;

@@ -5,7 +5,7 @@ author: luo
 picSrc: arc-data.jpg
 type: 1
 tags: [数据推送,Comet,Websocket,SSE]
-describe: 数据推送在当下非常火热，我们的手机每天都能收到来自APP的各种消息，JavaScript数据推送主要致力于webapp的在线推送服务，不用我们每次都像服务器去发送Ajax请求而主动从Server端推送数据到本地。在早期必须保持着一个链接不放，或者通过前端不停的向后端发送请求，H5更新后有了WebSocket大大改善了双向和单向推送数据的便利性。
+describe: 数据推送在当下非常火热，我们的手机每天都能收到来自APP的各种消息，JavaScript数据推送主要致力于webapp的在线推送服务，不用我们每次都像服务器去发送Ajax请求而主动从Server端推送数据到本地。
 ---
 
 ### 1.Comet:基于http长链接的服务器推送技术 ###

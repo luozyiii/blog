@@ -20,7 +20,7 @@ Comet 是一种 Web 应用架构。服务器端会主动以异步的方式向客
 	//header("Content-type:appliacation/json;charset=utf-8") ;
 	header("CacheC-Control:max-age=0");
 	$i = 0;
-	while($ < 9){
+	while($i < 9){
 		$i ++;
 		//$res = array('success' => "ok",'text' => "我是测试文本");
 		//echo json_encode($res);

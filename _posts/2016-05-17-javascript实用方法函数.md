@@ -8,7 +8,7 @@ tags: [javascript,方法,函数]
 describe: 最常用的javascript方法函数
 ---
 
-####字符串长度截取####
+#### 字符串长度截取 ####
 
 	function cutstr(str, len) {
        	var temp,
@@ -31,44 +31,44 @@ describe: 最常用的javascript方法函数
        	return strre + "..."
    }
 
-####替换全部####
+#### 替换全部 ####
 
 	String.prototype.replaceAll = function(s1, s2) {
 	   	return this.replace(new RegExp(s1, "gm"), s2)
 	}
 
-####清除空格####
+#### 清除空格 ####
 
 	String.prototype.trim = function() {
 	   	var reExtraSpace = /^\s*(.*?)\s+$/;
 	   	return this.replace(reExtraSpace, "$1")
 	}
 
-####清除左空格/右空格####
+#### 清除左空格/右空格 ####
 
 	function ltrim(s){ return s.replace( /^(\s*|　*)/, ""); } 
 	function rtrim(s){ return s.replace( /(\s*|　*)$/, ""); }
 
-####判断是否以某个字符串开头####
+#### 判断是否以某个字符串开头 ####
 
 	String.prototype.startWith = function (s) {
 	   	return this.indexOf(s) == 0
 	}
 
-####判断是否以某个字符串结束####
+#### 判断是否以某个字符串结束 ####
 
 	String.prototype.endWith = function (s) {
 	   	var d = this.length - s.length;
 	   	return (d >= 0 && this.lastIndexOf(s) == d)
 	}
 
-####转义html标签####
+#### 转义html标签 ####
 
 	function HtmlEncode(text) {
 	   	return text.replace(/&/g, '&').replace(/\"/g, '"').replace(/</g, '<').replace(/>/g, '>')
 	}
 
-####时间日期格式转换####
+#### 时间日期格式转换 ####
 
 	Date.prototype.Format = function(formatStr) {
 		var str = formatStr;
@@ -89,7 +89,7 @@ describe: 最常用的javascript方法函数
 		return str
 	}
 
-####判断是否为数字类型####
+#### 判断是否为数字类型 ####
 
 	function isDigit(value) {
        	var patrn = /^[0-9]*$/;
@@ -100,7 +100,7 @@ describe: 最常用的javascript方法函数
        	}
    	}
 
-####设置cookie值####
+#### 设置cookie值 ####
 	function setCookie(name, value, Hours) {
 		var d = new Date();
 		var offset = 8;
@@ -111,7 +111,7 @@ describe: 最常用的javascript方法函数
 		document.cookie = name + "=" + escape(value) + ";path=/;expires=" + exp.toGMTString() + ";domain=360doc.com;"
 	}
 
-####获取cookie值####
+#### 获取cookie值 ####
 
 	function getCookie(name) {
 		var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
@@ -119,7 +119,7 @@ describe: 最常用的javascript方法函数
 		return null
 	}
 
-####加入收藏夹####
+#### 加入收藏夹 ####
 
 	function AddFavorite(sURL, sTitle) {
 	   	try {
@@ -133,7 +133,7 @@ describe: 最常用的javascript方法函数
 	   	}
 	}
 
-####设为首页####
+#### 设为首页 ####
 
 	function setHomepage() {
        	if (document.all) {
@@ -152,7 +152,7 @@ describe: 最常用的javascript方法函数
        }
    }
 
-####加载样式文件####
+#### 加载样式文件 ####
 
 	function LoadStyle(url) {
        	try {
@@ -167,7 +167,7 @@ describe: 最常用的javascript方法函数
        	}
    	}
 
-####返回脚本内容####
+#### 返回脚本内容 ####
 
 	function evalscript(s) {
        	if(s.indexOf('<script') == -1) return s;
@@ -188,13 +188,13 @@ describe: 最常用的javascript方法函数
        	return s;
    	}
 
-####清除脚本内容####
+#### 清除脚本内容 ####
 
 	function stripscript(s) {
        	return s.replace(/<script.*?>.*?<\/script>/ig, '');
    	}
 
-####动态加载脚本文件####
+#### 动态加载脚本文件 ####
 
 	function appendscript(src, text, reload, charset) {
 		var id = hash(src + text);
@@ -229,13 +229,13 @@ describe: 最常用的javascript方法函数
 		} catch(e) {}
 	}
 
-####返回按ID检索的元素对象####
+#### 返回按ID检索的元素对象 ####
 
 	function $(id) {
 		return !id ? null : document.getElementById(id);
 	}
 
-####跨浏览器绑定事件####
+#### 跨浏览器绑定事件 ####
 
 	function addEventSamp(obj,evt,fn){ 
 		if(!oTarget){return;}
@@ -248,7 +248,7 @@ describe: 最常用的javascript方法函数
 		} 
    	}
 
-####跨浏览器删除事件####
+#### 跨浏览器删除事件 ####
 
 	function delEvt(obj,evt,fn){
        	if(!obj){return;}

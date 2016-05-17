@@ -11,25 +11,25 @@ describe: 最常用的javascript方法函数
 #### 字符串长度截取 ####
 
 	function cutstr(str, len) {
-       	var temp,
-           	icount = 0,
-           	patrn = /[^\x00-\xff]/，
-           	strre = "";
-       	for (var i = 0; i < str.length; i++) {
-           	if (icount < len - 1) {
-               	temp = str.substr(i, 1);
-                   	if (patrn.exec(temp) == null) {
-                      	icount = icount + 1
-               	} else {
-                   	icount = icount + 2
-               	}
-               	strre += temp
-               	} else {
-               	break;
-           	}
-       	}
-       	return strre + "..."
-   }
+	   	var temp,
+	       	icount = 0,
+	       	patrn = /[^\x00-\xff]/，
+	       	strre = "";
+	   	for (var i = 0; i < str.length; i++) {
+	       	if (icount < len - 1) {
+	           	temp = str.substr(i, 1);
+	               	if (patrn.exec(temp) == null) {
+	                  	icount = icount + 1
+	           	} else {
+	               	icount = icount + 2
+	           	}
+	           	strre += temp
+	           	} else {
+	           	break;
+	       	}
+	   	}
+	   	return strre + "..."
+	}
 
 #### 替换全部 ####
 
@@ -92,13 +92,13 @@ describe: 最常用的javascript方法函数
 #### 判断是否为数字类型 ####
 
 	function isDigit(value) {
-       	var patrn = /^[0-9]*$/;
-       	if (patrn.exec(value) == null || value == "") {
-           	return false
-       	} else {
-           	return true
-       	}
-   	}
+		var patrn = /^[0-9]*$/;
+		if (patrn.exec(value) == null || value == "") {
+	   	return false
+		} else {
+	   	return true
+		}
+	}
 
 #### 设置cookie值 ####
 	function setCookie(name, value, Hours) {
@@ -122,77 +122,77 @@ describe: 最常用的javascript方法函数
 #### 加入收藏夹 ####
 
 	function AddFavorite(sURL, sTitle) {
-	   	try {
-	       	window.external.addFavorite(sURL, sTitle)
-	   	} catch(e) {
-	       	try {
-	           	window.sidebar.addPanel(sTitle, sURL, "")
-	       	} catch(e) {
-	           	alert("加入收藏失败，请使用Ctrl+D进行添加")
-	       	}
-	   	}
+		try {
+		   	window.external.addFavorite(sURL, sTitle)
+		} catch(e) {
+		   	try {
+		       	window.sidebar.addPanel(sTitle, sURL, "")
+		   	} catch(e) {
+		       	alert("加入收藏失败，请使用Ctrl+D进行添加")
+		   	}
+		}
 	}
 
 #### 设为首页 ####
 
 	function setHomepage() {
-       	if (document.all) {
-           	document.body.style.behavior = 'url(#default#homepage)';
-           	document.body.setHomePage('http://w3cboy.com')
-       	} else if (window.sidebar) {
-           	if (window.netscape) {
-               	try {
-                   	netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect")
-               	} catch(e) {
-                  	alert("该操作被浏览器拒绝，如果想启用该功能，请在地址栏内输入 about:config,然后将项 signed.applets.codebase_principal_support 值该为true")
-                   	}
-           	}
-          	var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
-           	prefs.setCharPref('browser.startup.homepage', 'http://w3cboy.com')
-       }
-   }
+	   	if (document.all) {
+	       	document.body.style.behavior = 'url(#default#homepage)';
+	       	document.body.setHomePage('http://w3cboy.com')
+	   	} else if (window.sidebar) {
+	       	if (window.netscape) {
+	           	try {
+	               	netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect")
+	           	} catch(e) {
+	              	alert("该操作被浏览器拒绝，如果想启用该功能，请在地址栏内输入 about:config,然后将项 signed.applets.codebase_principal_support 值该为true")
+	               	}
+	       	}
+	      	var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+	       	prefs.setCharPref('browser.startup.homepage', 'http://w3cboy.com')
+	   }
+	}
 
 #### 加载样式文件 ####
 
 	function LoadStyle(url) {
-       	try {
-           	document.createStyleSheet(url)
-       	} catch(e) {
+	   	try {
+	       	document.createStyleSheet(url)
+	   	} catch(e) {
 			var cssLink = document.createElement('link');
 			cssLink.rel = 'stylesheet';
 			cssLink.type = 'text/css';
 			cssLink.href = url;
 			var head = document.getElementsByTagName('head')[0];
 			head.appendChild(cssLink)
-       	}
-   	}
+	   	}
+	}
 
 #### 返回脚本内容 ####
 
 	function evalscript(s) {
-       	if(s.indexOf('<script') == -1) return s;
-       	var p = /<script[^\>]*?>([^\x00]*?)<\/script>/ig;
-       	var arr = [];
-       	while(arr = p.exec(s)) {
-          	var p1 = /<script[^\>]*?src=\"([^\>]*?)\"[^\>]*?(reload=\"1\")?(?:charset=\"([\w\-]+?)\")?><\/script>/i;
-           	var arr1 = [];
-           	arr1 = p1.exec(arr[0]);
-           	if(arr1) {
-               	appendscript(arr1[1], '', arr1[2], arr1[3]);
-           	} else {
-               	p1 = /<script(.*?)>([^\x00]+?)<\/script>/i;
-               	arr1 = p1.exec(arr[0]);
-               	appendscript('', arr1[2], arr1[1].indexOf('reload=') != -1);
-           	}
-       	}
-       	return s;
-   	}
+	   	if(s.indexOf('<script') == -1) return s;
+	   	var p = /<script[^\>]*?>([^\x00]*?)<\/script>/ig;
+	   	var arr = [];
+	   	while(arr = p.exec(s)) {
+	      	var p1 = /<script[^\>]*?src=\"([^\>]*?)\"[^\>]*?(reload=\"1\")?(?:charset=\"([\w\-]+?)\")?><\/script>/i;
+	       	var arr1 = [];
+	       	arr1 = p1.exec(arr[0]);
+	       	if(arr1) {
+	           	appendscript(arr1[1], '', arr1[2], arr1[3]);
+	       	} else {
+	           	p1 = /<script(.*?)>([^\x00]+?)<\/script>/i;
+	           	arr1 = p1.exec(arr[0]);
+	           	appendscript('', arr1[2], arr1[1].indexOf('reload=') != -1);
+	       	}
+	   	}
+	   	return s;
+	}
 
 #### 清除脚本内容 ####
 
 	function stripscript(s) {
-       	return s.replace(/<script.*?>.*?<\/script>/ig, '');
-   	}
+		return s.replace(/<script.*?>.*?<\/script>/ig, '');
+	}
 
 #### 动态加载脚本文件 ####
 
@@ -239,27 +239,27 @@ describe: 最常用的javascript方法函数
 
 	function addEventSamp(obj,evt,fn){ 
 		if(!oTarget){return;}
-		if (obj.addEventListener) { 
-		   	obj.addEventListener(evt, fn, false); 
-		}else if(obj.attachEvent){ 
-		   	obj.attachEvent('on'+evt,fn); 
+			if (obj.addEventListener) { 
+				obj.addEventListener(evt, fn, false); 
+			}else if(obj.attachEvent){ 
+				obj.attachEvent('on'+evt,fn); 
 		}else{
-		   	oTarget["on" + sEvtType] = fn;
+			oTarget["on" + sEvtType] = fn;
 		} 
-   	}
+	}
 
 #### 跨浏览器删除事件 ####
 
 	function delEvt(obj,evt,fn){
-       	if(!obj){return;}
-       	if(obj.addEventListener){
-           	obj.addEventListener(evt,fn,false);
-       	}else if(oTarget.attachEvent){
-           	obj.attachEvent("on" + evt,fn);
-       	}else{
-           	obj["on" + evt] = fn;
-       	}
-   	}
+		if(!obj){return;}
+		if(obj.addEventListener){
+	   		obj.addEventListener(evt,fn,false);
+		}else if(oTarget.attachEvent){
+	   		obj.attachEvent("on" + evt,fn);
+		}else{
+	   		obj["on" + evt] = fn;
+		}
+	}
 
 
 
